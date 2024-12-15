@@ -321,6 +321,7 @@ textarea {
 #output {
     position: relative;
     font-size: 50px;
+    height: 100px;
     margin-bottom: 10px;
     font-weight: bold;
 }
