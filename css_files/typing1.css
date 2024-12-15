@@ -227,19 +227,24 @@ textarea {
     font-family: Roboto, sans-serif;
     color: #999;
     text-align: center;
+    display: flex;
+    justify-content: center;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
     border-top: 3px solid #222;
     font-size: 16px;
 
-    a {
+    div {
+        cursor: pointer;
         color: #fff;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 200px;
         transition: color 0.2s;
         text-decoration: none;
 
         &:hover {
             color: #ccf;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
     }
 }
