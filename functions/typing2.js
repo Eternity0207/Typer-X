@@ -215,5 +215,5 @@ $("#restart").click(function () {
 });
 
 $("#back").click(function () {
-    window.location.pathname = '/pages/index.html';
+    window.location.pathname = './index.html';
 });

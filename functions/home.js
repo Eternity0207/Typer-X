@@ -1,8 +1,8 @@
 $("#test1").click(function () {
-    window.location.pathname = '/pages/typing1.html';
+    window.location.pathname = './typing1.html';
 });
 $("#test2").click(function () {
-    window.location.pathname = '/pages/typing2.html';
+    window.location.pathname = './typing2.html';
 });
 $("#test1i").click(async function () {
     $("#info").addClass("hidden")

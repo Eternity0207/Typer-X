@@ -121,7 +121,7 @@ $("#pause").click(function () {
 });
 
 $("#change").click(function () {
-    window.location.pathname = '/pages/index.html';
+    window.location.pathname = './index.html';
 });
 
 function startTimer() {
