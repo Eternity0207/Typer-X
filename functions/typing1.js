@@ -25,15 +25,15 @@ function type(input, target, current, time, random, isDeleting = false) {
     }
 }
 
-let letters = ''; // Declare it here to be used globally
+let letters = '';
 fetch("https://baconipsum.com/api/?type=all-meat&sentences=5&format=json")
     .then(response => response.json())
     .then(data => {
         const sentence = data.join(' ');
-        $("#input_text").text(sentence); // Show the sentence
-        letters = sentence; // Store it globally
-        console.log(sentence); // This should log correctly
-        startTypingTest(); // Start the typing test
+        $("#input_text").text(sentence);
+        letters = sentence;
+        console.log(sentence);
+        startTypingTest(); 
         type(input_text, target_setting, 0, time_setting, random_setting);
     })
     .catch(error => {
