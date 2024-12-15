@@ -80,8 +80,7 @@ function startTypingTest() {
                 $("#target").text(current_string);
                 $("#your-attempt").append(charTyped);
 
-                let elapsedTime = $("#text").val();
-                let wpm = Math.round((wordcount / elapsedTime) * 60);
+                let wpm = Math.round((wordcount / timer) * 60);
                 $("#wpm").text(wpm);
 
                 if (index === letters.length) {
