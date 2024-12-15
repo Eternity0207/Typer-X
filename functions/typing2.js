@@ -170,7 +170,7 @@ function reset() {
 }
 
 async function fetchQuotes() {
-    const numberOfQuotes = 1;
+    const numberOfQuotes = 2;
 
     let promises = Array.from({ length: numberOfQuotes }, () =>
         fetch("https://quotes-api-self.vercel.app/quote")
