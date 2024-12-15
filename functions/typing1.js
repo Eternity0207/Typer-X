@@ -81,6 +81,7 @@ function startTypingTest() {
                 $("#your-attempt").append(charTyped);
 
                 let wpm = Math.round((wordcount / timer) * 60);
+                if (!wpm || wpm === NaN) wpm = 0;
                 $("#wpm").text(wpm);
 
                 if (index === letters.length) {
