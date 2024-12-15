@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+html {
+    background-color: #323437;
+}
+
+.logo {
+    margin: 10px;
+    filter: invert(100%);
+    height: 80px;
+    width: 250px;
+}
+
+.tester {
+    position: fixed;
+    top: 250px;
+    width: 1300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 55px;
+    display: inline-block;
+    color: gray;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    font-family: "Roboto Mono", Vazirmatn, monospace;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#focus {
+    cursor: pointer;
+    position: fixed;
+    top: 250px;
+    height: 50px;
+    width: 1300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #323437e1;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    display: inline-block;
+    color: white;
+    letter-spacing: 2px;
+    padding: 55px;
+    z-index: 10;
+    font-family: "Roboto Mono", Vazirmatn, monospace;
+}
+
+.correct {
+    color: white;
+}
+
+.wrong {
+    color: #ca4754;
+}
+
+.wrongSpace {
+    background-color: #ca4754;
+}
+
+.cursor {
+    display: inline-block;
+    position: absolute;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 3px;
+    height: 40px;
+    background-color: rgb(173, 173, 12);
+    pointer-events: none;
+    z-index: 1000;
+    vertical-align: middle;
+    animation: cursor 1.5s infinite;
+}
+
+#timer {
+    position: fixed;
+    width: 1300px;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 55px;
+    display: inline-block;
+    color: yellow;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    font-family: "Roboto Mono", Vazirmatn, monospace;
+}
+
+#restart {
+    position: fixed;
+    width: 1300px;
+    top: 420px;
+    left: 0;
+    right: 0;
+    margin: 100px auto;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    display: inline-block;
+    color: yellow;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    font-family: "Roboto Mono", Vazirmatn, monospace;
+}
+
+#restart > img{
+    margin-top: 10px;
+    transform: scaleX(-1);
+    cursor: pointer;
+    opacity: 0.5;
+    width: 50px;
+}
+#restart > img:hover{
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);    
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.result {
+    position: fixed;
+    top: 250px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #323437;
+    z-index: 10000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: scaleUp 0.2s ease-out, fadeIn 0.5s ease-in;
+}
+
+.wpm,
+.accu {
+    padding: 10px;
+    color: rgb(100, 102, 105);
+    font-size: 32px;
+}
+
+#wpm,
+#accu {
+    padding: 10px;
+    color: rgb(226, 183, 20);
+    font-size: 64px;
+}
+
+#close {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgb(100, 102, 105);
+    font-family: cursive;
+    font-size: 30px;
+}
+
+#close:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 50px #000000,
+        0 0 75px #000000;
+}
+
+#back{
+    position: fixed;
+    bottom: 0;
+    margin: 15px 15px;
+    right: 0;
+    color: wheat;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-family: "Roboto Mono", Vazirmatn, monospace;
+    background-color: black;
+    border: solid 0px black;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 10000;
+}
+
+#back:hover{
+    border: solid 0px black;
+    background-color: #212020;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Define the keyframes for the scale-up animation */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.6);
+    }
+
+    25% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

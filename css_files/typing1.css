@@ -1,0 +1,341 @@
+body {
+    padding-top: 20px;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    /* background: #fff; */
+    color: #222;
+    padding-bottom: 40px;
+    background: url(https://djave.co.uk/hosted/subtlepatterns/lightpaperfibers.png);
+}
+
+#focus {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+
+.mono {
+    font-family: "Cutive Mono", monospace;
+}
+
+.wrong {
+    background: red;
+    color: #fff;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+hr {
+    margin: 1em 0;
+    max-width: 800px;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+}
+
+.results {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.stats {
+    overflow: hidden;
+    margin-bottom: 1em;
+    height: 100px;
+    list-style: none;
+    padding: 20px 0;
+    font-size: 19px;
+    font-weight: 900;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    li {
+        width: 25%;
+        float: left;
+    }
+}
+
+.target {
+    color: #fff;
+    text-align: left;
+    font-size: 35px;
+    min-width: 400px;
+    min-height: 50px;
+    width: 900px;
+    display: inline-block;
+    position: relative;
+    white-space: pre;
+    background: #333;
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.2);
+    padding: 22px 10px 10px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #f00;
+        left: 10px;
+        top: 68px;
+        -webkit-animation: cursor_flash .5s infinite;
+        -moz-animation: cursor_flash .5s infinite;
+        -o-animation: cursor_flash .5s infinite;
+        animation: cursor_flash .5s infinite;
+    }
+
+    &:before {
+        font-family: Roboto;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        content: 'Type the text below';
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 2px;
+        text-align: left;
+        position: absolute;
+        color: #fff;
+    }
+}
+
+
+@-webkit-keyframes cursor_flash {
+    0% {
+        background: white;
+    }
+
+    50% {
+        background: red;
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+@-moz-keyframes cursor_flash {
+    0% {
+        background: white;
+    }
+
+    50% {
+        background: red;
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+@-o-keyframes cursor_flash {
+    0% {
+        background: white;
+    }
+
+    50% {
+        background: red;
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+@keyframes cursor_flash {
+    0% {
+        background: white;
+    }
+
+    50% {
+        background: red;
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 10px;
+    background: #057f24;
+    border-radius: 2px;
+    color: #fff;
+}
+
+#textarea {
+    position: absolute;
+}
+
+.spell {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    span {
+        color: yellow;
+    }
+}
+
+textarea {
+    color: #fff;
+    font-size: 100px;
+    width: 60%;
+    margin: 1px auto;
+    display: none;
+    position: relative;
+    white-space: pre;
+    background: #333;
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.your-attempt {
+    overflow-x: hidden;
+    background: #222;
+    color: #fff;
+    text-wrap: wrap;
+    padding: 10px;
+    padding-right: 10px;
+    min-height: 300px;
+    font-size: 30px;
+    border: 1px solid #555;
+    max-width: 900px;
+    margin: 20px auto;
+    white-space: pre-wrap;
+}
+
+.results {
+    font-family: Roboto;
+}
+
+.settings {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 6px 6px;
+    background: #444;
+    font-family: Roboto, sans-serif;
+    color: #999;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    border-top: 3px solid #222;
+    font-size: 16px;
+
+    a {
+        color: #fff;
+        margin-left: 100px;
+        margin-right: 100px;
+        transition: color 0.2s;
+        text-decoration: none;
+
+        &:hover {
+            color: #ccf;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark background to highlight the popup */
+    /* Remove border from here as we are using glowing effect */
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    position: relative;
+    animation: glowing-border 1.5s infinite alternate;
+    /* Apply glowing effect here */
+}
+
+/* Keyframes for the glowing border effect */
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
+        /* Gray glow at 0% */
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(128, 128, 128, 1);
+        /* Gray glow at 50% */
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
+        /* Gray glow at 100% */
+    }
+}
+
+.popup-content h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0;
+}
+
+.popup-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#out {
+    padding-right: 15px;
+    color: #fff;
+    position: relative;
+}
+
+#output {
+    position: relative;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Animation for the blinking effect */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

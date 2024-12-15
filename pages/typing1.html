@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css_files/typing1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>TyperX 1</title>
+</head>
+
+<body>
+    <div class="focus1">
+        <p id="focus" style="cursor: pointer;">Good luck Testing Your Speed</p>
+    </div>
+    <div class="out">
+        <div id="output"></div>
+    </div>
+    <div class="target mono" id="target">
+    </div>
+    <div id="your-attempt" class="mono your-attempt" placeholder="Your text will appear here"></div>
+    <div class="results">
+        <ul class="stats">
+            <li>Words per minute <span id="wpm">0</span></li>
+            <li>Wordcount <span id="wordcount">0</span></li>
+            <li>Timer <span id="timer">0</span></li>
+            <li>Errors <span id="errors">0</span></li>
+        </ul>
+    </div>
+    <hr style="clear:both;" />
+    <div>
+        <textarea name="" id="input_text" cols="30" rows="10"></textarea>
+    </div>
+    <div class="settings">
+        <a href="#" id="reset">Reset</a> | <a href="#" id="change">Back</a> | <a href="#" id="pause">Pause II</a>
+    </div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Typing Result</h2>
+            <p id="popupMessage"></p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+    <script src="/functions/typing1.js"></script>
+</body>
+
+</html>

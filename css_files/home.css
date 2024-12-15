@@ -1,0 +1,296 @@
+.hidden {
+    display: none;
+}
+
+html {
+    background-image: url("/assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    margin: 10px;
+    filter: invert(100%);
+    height: 80px;
+    width: 250px;
+    animation: scaleUp 0.5s ease-in, fadeIn 0.5s ease-out;
+}
+
+.infom {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    color: white;
+    font-family: cursive;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.245);
+    border-radius: 7px;
+    animation: scaleUp 1s ease-out, fadeIn 1s ease-in, boxShadowAnimation 1s ease-in;
+}
+
+.contacts {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    margin-right: 100px;
+    margin-bottom: 5px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.contact {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.245);
+    /* Normal border */
+    transition: box-shadow 0.3s ease;
+    animation: scaleUp 1s ease-out, fadeIn 1s ease-in;
+    /* Use animation for keyframes */
+    /* Smooth transition for the glow effect */
+}
+
+.contact:hover {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.8);
+    /* Glowing effect */
+}
+
+.end {
+    margin-right: 25px;
+}
+
+.type {
+    width: 60%;
+    justify-content: space-between;
+    position: fixed;
+    /* Fix the element in place */
+    top: 50%;
+    /* Position the element vertically in the middle */
+    left: 50%;
+    /* Position the element horizontally in the middle */
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: flex;
+}
+
+.first {
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.4);
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.516);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: scaleUp 1s ease-out, fadeIn 1s ease-in, boxShadowAnimation 1s ease-in;
+    /* Use animation for keyframes */
+}
+
+.first:hover {
+    border-radius: 10px;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+    font-size: 40px;
+    font-family: cursive;
+    color: white;
+    margin: 10px;
+    margin-left: 2px;
+}
+
+.desc {
+    font-size: 17px;
+    font-family: cursive;
+    color: white;
+    margin: 10px;
+    margin-top: 0;
+    margin: 0 4px;
+}
+
+.img {
+    height: 180px;
+}
+
+.but {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.more {
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+    margin: 10px 0 0 0px;
+    font-size: 14px;
+    color: white;
+    font-family: cursive;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.more:hover {
+    box-shadow: 0 0 7px 4px rgba(255, 255, 255, 0.4);
+}
+
+.first:has(.more:hover) {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.4);
+}
+
+#info {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(54, 54, 54, 0.9);
+    color: white;
+    position: fixed;
+    height: auto;
+    padding: 0 10px 10px;
+    width: 500px;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s, glowing 2s infinite alternate;
+}
+
+#name {
+    font-family: cursive;
+    font-size: 40px;
+}
+
+#description {
+    font-family: cursive;
+    font-size: 20px;
+}
+
+#close {
+    font-family: cursive;
+    font-size: 20px;
+    position: inherit;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+#close:hover {
+    transform: scale(1.1);
+}
+
+.hover-container {
+    position: relative;
+    /* Ensure positioning context for the info box */
+    display: flex;
+    /* Wraps around the button and the info box */
+    flex-direction: column;
+}
+
+.info-git {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    top: 0;
+    /* Position below the button */
+    right: 0;
+    transform: translateX(-50%);
+    /* Adjust alignment */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark background */
+    color: white;
+    /* Text color */
+    padding: 2px;
+    margin-top: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    white-space: nowrap;
+    /* Prevent line breaks */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    /* Ensure it appears above other elements */
+}
+
+.hover-container:hover .info-git {
+    display: block;
+    /* Show the box on hover */
+}
+
+/* Define the keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Define the keyframes for the scale-up animation */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.6);
+    }
+
+    25% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Define the keyframes for the box-shadow animation */
+@keyframes boxShadowAnimation {
+    0% {
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.85);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 40px rgba(0, 0, 0, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.85);
+    }
+}
